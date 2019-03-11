@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export NPM_TOKEN="abe72c4e-cbd0-4e14-a236-c8c8fe089b66"
+export GITHUB_TOKEN="d7b3a60fd9534dd158fc6857af49c4d9b4d5b254"

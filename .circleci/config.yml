@@ -1,0 +1,49 @@
+version: 2
+
+jobs:
+  test:
+    docker:
+      - image: circleci/node:10.14.1
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+           - v1-dependencies-{{ checksum "package.json" }}
+           - v1-dependencies-
+      - run:
+          name: dependencies_install
+          command: |
+            npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Test package
+          command: |
+            npm test
+
+  publish:
+    docker:
+      - image: circleci/node:10.14.1
+    working_directory: ~/project
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+        name: Publish package
+        command: |
+          echo "npm run semantic-release || true"
+
+workflows:
+  version: 2
+  check_package:
+    jobs:
+      - test
+      - publish:
+          requires:
+            - test
+          filters:
+            branches:
+              only: develop
