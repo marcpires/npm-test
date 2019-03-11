@@ -2,13 +2,21 @@
   "name": "@devopsbootcamp/teste",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"ok\" && exit 0",
     "semantic-release": "semantic-release"
   },
   "author": "",
   "repository": "https://github.com/marcpires/npm-test.git",
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm"
+    ]
+  },
   "license": "ISC",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^6.1.0",
