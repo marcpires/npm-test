@@ -6,7 +6,10 @@ jobs:
       - image: circleci/node:10.14.1
     working_directory: ~/project
     steps:
-      - checkout
+      - run:
+          name: Clone Repo
+          command: |
+            git clone ${CIRCLE_REPOSITORY_URL}
       - restore_cache:
           keys:
            - v1-dependencies-{{ checksum "package.json" }}
