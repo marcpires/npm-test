@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Clone Repo
           command: |
-            git clone ${CIRCLE_REPOSITORY_URL}
+            git clone ${CIRCLE_REPOSITORY_URL} | yes
       - restore_cache:
           keys:
            - v1-dependencies-{{ checksum "package.json" }}
