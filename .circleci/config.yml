@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Publish package
           command: |
-            echo "npm run semantic-release || true"
+            npm run semantic-release || true
 
 workflows:
   version: 2
@@ -46,4 +46,4 @@ workflows:
             - test
           filters:
             branches:
-              only: develop
+              only: master
