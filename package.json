@@ -1,0 +1,19 @@
+{
+  "name": "@devopsbootcamp/teste",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "author": "",
+  "repository": "https://github.com/devopsbootcamp-ead/npm-test.git",
+  "license": "ISC",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "semantic-release": "^15.13.3"
+  }
+}
