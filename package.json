@@ -11,6 +11,7 @@
   "repository": "https://github.com/marcpires/npm-test.git",
   "release": {
     "branch": "master",
+    "ci": true,
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
