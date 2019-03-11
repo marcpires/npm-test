@@ -8,7 +8,7 @@
     "semantic-release": "semantic-release"
   },
   "author": "",
-  "repository": "https://github.com/marcpires/npm-test.git",
+  "repository": "git@github.com:marcpires/npm-test.git",
   "license": "ISC",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^6.1.0",
