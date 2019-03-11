@@ -10,13 +10,13 @@
   "author": "",
   "repository": "https://github.com/marcpires/npm-test.git",
   "release": {
+    "repositoryUrl": "https://github.com/marcpires/npm-test.git",
     "branch": "master",
     "ci": true,
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      "@semantic-release/git"
+      "@semantic-release/npm"
     ]
   },
   "license": "ISC",
